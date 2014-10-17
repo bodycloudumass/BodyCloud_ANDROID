@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">New Activity Recognition</string>
+
+	<string name="tab_setup_text_avaiblenodes">Available Nodes:</string>
+	<string name="tab_setup_text_status">Status:</string>
+	<string name="tab_setup_text_status_inactive">Inactive</string>
+	<string name="tab_setup_text_status_standby">Stand-by</string>
+	<string name="tab_setup_text_status_active">Active</string>
+	<string name="tab_setup_text_autoremotesend">Send info to server periodically</string>
+	<string name="tab_setup_text_updatetime">Update time [min]:</string>
+	<string name="tab_setup_button_discovery">Discovery nodes</string>
+	<string name="tab_setup_button_start">Start monitoring</string>
+	<string name="tab_setup_button_stop">Stop monitoring</string>
+
+	<string name="tab_monitoring_text_walking">Walking</string>
+	<string name="tab_monitoring_text_standing">Standing</string>
+	<string name="tab_monitoring_text_sitting">Sitting</string>
+	<string name="tab_monitoring_text_lying">Lying</string>
+	<string name="tab_monitoring_text_pause">Pause</string>
+	<string name="tab_monitoring_text_standby">Stand-by</string>
+	<string name="tab_monitoring_button_pause">Pause monitoring</string>
+	<string name="tab_monitoring_button_resume">Resume monitoring</string>
+	<string name="tab_custom_button_start">Start</string>
+	<string name="tab_custom_button_start_text">Inserisci nome del file</string>
+	
+	
+    <string name="standing">Standing</string>
+    <string name="walking">Walking</string>
+    <string name="sitting">Sitting</string>
+    <string name="lying_down">Lying down</string>
+    <string name="StartRecording">Start recording</string>
+    <string name="rec">Rec</string>
+    <string name="exit">Esci</string>
+    <string name="addestra">Addestra</string>
+    <string name="setup_sensor">Setup sensors</string>
+    <string name="generats">Genera TS</string>
+    <string name="back">Back</string>
+    <string name="chk_general">General</string>
+    <string name="chk_custom_knn">Custom1</string>
+    <string name="chk_custom_jrip">Custom2</string>
+    <string name="BeltThigh">Cintura - Coscia</string>
+    <string name="BeltShoes">Cintura - Scarpa</string>
+    <string name="Option1">Full Cloud</string>
+    <string name="Option2">Mix Cloud</string>
+    <string name="Option3">Full Local</string>
+</resources>

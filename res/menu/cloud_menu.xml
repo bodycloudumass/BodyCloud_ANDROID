@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/option_one"
+         
+          android:title="Option One"
+          android:showAsAction="ifRoom"/>
+    <item android:id="@+id/option_two"
+          
+          android:title="option_two" />
+    <item android:id="@+id/option_three"
+          
+          android:title="Option three"
+          android:showAsAction="ifRoom"/>
+
+</menu>

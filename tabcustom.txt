@@ -1,0 +1,116 @@
+<!-- * T A B * C U S T O M * -->
+
+                <LinearLayout
+                    android:id="@+id/tab_custom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <ScrollView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tab_custom_text_cronometer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#53b8ff"
+                                android:textSize="20sp" >
+                            </TextView>
+
+                            <ImageView
+                                android:id="@+id/tab_custom_image_activity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="1dip"
+                                android:src="@drawable/tab_monitoring_standby" >
+                            </ImageView>
+
+                     <!-- 
+                            <RadioGroup
+                                android:id="@+id/radioGroup1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="5dp" >
+
+                                <RadioButton
+                                    android:id="@+id/radioButton1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/standing" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/walking" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/sitting" />
+
+                                <RadioButton
+                                    android:id="@+id/radioButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/lying_down" />
+                            </RadioGroup> 	-->
+                            
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" >
+
+                                <Button
+                                    android:id="@+id/tab_custom_button_setup_button"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dip"
+                                    android:layout_weight="0.5"
+                                    android:drawableLeft="@drawable/tab_setup"
+                                    android:text="@string/setup_sensor" />
+
+                                <Button
+                                    android:id="@+id/recStopButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dip"
+                                    android:layout_weight="0.5"
+                                    android:drawableLeft="@drawable/rec"
+                                    android:text="@string/rec" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" >
+
+                                <Button
+                                    android:id="@+id/tab_custom_button_generats"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dip"
+                                    android:layout_weight="0.5"
+                                    android:drawableLeft="@drawable/tab_setup"
+                                    android:text="@string/generats" />
+
+                                <Button
+                                    android:id="@+id/tab_custom_button_addestra"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dip"
+                                    android:layout_weight="0.5"
+                                    android:drawableLeft="@drawable/tab_setup"
+                                    android:text="@string/addestra" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>

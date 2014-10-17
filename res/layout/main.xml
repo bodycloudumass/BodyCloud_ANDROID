@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:background="#FFFFFF">
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="5dp" >
+
+                <!-- * T A B * S E T U P * -->
+
+                <LinearLayout
+                    android:id="@+id/tab_setup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dip" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dip"
+                            android:text="@string/tab_setup_text_avaiblenodes" >
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/tab_setup_text_availablenodes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dip"
+                            android:text="0" >
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dip"
+                            android:text="@string/tab_setup_text_status" />
+
+                        <TextView
+                            android:id="@+id/tab_setup_text_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dip"
+                            android:text="@string/tab_setup_text_status_inactive" />
+
+                    </LinearLayout>
+
+					<RelativeLayout
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:layout_gravity="center" >
+
+                    <Button
+                        android:id="@+id/tab_setup_button_discovery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dip"
+                        android:text="@string/tab_setup_button_discovery" >
+                    </Button>
+					
+                    <!-->LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dip" >
+                    </LinearLayout-->
+
+                    <Button
+                        android:id="@+id/tab_setup_button_start"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dip"
+                      	android:layout_toRightOf="@id/tab_setup_button_discovery"
+                        android:enabled="false"
+                        android:text="@string/tab_setup_button_start" />
+                    
+                    <ToggleButton
+                        android:layout_centerHorizontal="true"
+                        android:textOn=""
+                        android:textOff=""
+                        android:focusableInTouchMode="false"
+                        android:id="@+id/cloud_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dip"
+                      	android:layout_below="@id/tab_setup_button_discovery"
+                        android:focusable="false"
+                        android:background="@drawable/cloud_but" 
+                        android:onClick="onToggleClicked"/>
+
+                    </RelativeLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dip"
+                        android:orientation="horizontal" >
+
+                        <CheckBox
+                            android:id="@+id/chk_general"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/chk_general"
+                            android:checked="true"
+                            android:visibility="invisible"/>
+
+                        <CheckBox
+                            android:id="@+id/chk_custom_knn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/chk_custom_knn" 
+                            android:visibility="invisible"/>
+                        
+                        <CheckBox
+                            android:id="@+id/chk_custom_jrip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/chk_custom_jrip" 
+                            android:visibility="invisible"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dip" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="5dip"
+                            android:text="@string/tab_setup_text_autoremotesend" >
+                        </TextView>
+
+                        <ToggleButton
+                            android:id="@+id/tab_setup_togglebutton_autoremotesend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="5dip"
+                            android:layout_marginLeft="40dip"
+                            android:layout_marginRight="5dip"
+                            android:layout_marginTop="5dip"
+                            android:layout_weight="0.55"
+                            android:checked="false"
+                            android:enabled="false" >
+                        </ToggleButton>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dip"
+                            android:text="@string/tab_setup_text_updatetime" >
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/tab_setup_text_updatetime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dip"
+                            android:text="10" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <SeekBar
+                        android:id="@+id/seekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dip"
+                        android:max="60" >
+                    </SeekBar>
+                </LinearLayout>
+
+                <!-- * T A B * M O N I T O R I N G * -->
+
+                <LinearLayout
+                    android:id="@+id/tab_monitoring"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:id="@+id/tab_monitoring_image_activity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_margin="5dip"
+                        android:src="@drawable/tab_monitoring_standby" >
+                    </ImageView>
+
+                    <TextView
+                        android:id="@+id/tab_monitoring_text_activity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="5dip"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginRight="5dip"
+                        android:layout_marginTop="20dip"
+                        android:text="@string/tab_monitoring_text_standby"
+                        android:textColor="#53b8ff"
+                        android:textSize="20sp"
+                        android:textStyle="bold" >
+                    </TextView>
+
+                    <Button
+                        android:id="@+id/tab_monitoring_button_pause"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dip"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginRight="5dip"
+                        android:layout_marginTop="20dip"
+                        android:enabled="false"
+                        android:text="@string/tab_monitoring_button_pause" >
+                    </Button>
+                    
+                            <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp" >
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/standing" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/walking" />
+
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sitting" />
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lying_down" />
+        </RadioGroup>
+                    
+                </LinearLayout>
+
+                <!-- * T A B * S T A T I S T I C S * -->
+
+                <LinearLayout
+                    android:id="@+id/tab_statistics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dip"
+                            android:text="@string/tab_monitoring_text_standing"
+                            android:textSize="20sp"
+                            android:textStyle="bold" >
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dip"
+                            android:text="@string/tab_monitoring_text_walking"
+                            android:textSize="20sp"
+                            android:textStyle="bold" >
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dip"
+                            android:text="@string/tab_monitoring_text_sitting"
+                            android:textSize="20sp"
+                            android:textStyle="bold" >
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dip"
+                            android:text="@string/tab_monitoring_text_lying"
+                            android:textSize="20sp"
+                            android:textStyle="bold" >
+                        </TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tab_statistics_text_standing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dip"
+                            android:text="0%"
+                            android:textColor="#53b8ff"
+                            android:textSize="20sp" >
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/tab_statistics_text_walking"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dip"
+                            android:text="0%"
+                            android:textColor="#53b8ff"
+                            android:textSize="20sp" >
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/tab_statistics_text_sitting"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dip"
+                            android:text="0%"
+                            android:textColor="#53b8ff"
+                            android:textSize="20sp" >
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/tab_statistics_text_lying"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dip"
+                            android:text="0%"
+                            android:textColor="#53b8ff"
+                            android:textSize="20sp" >
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- * T A B * L O G * -->
+
+                <LinearLayout
+                    android:id="@+id/tab_log"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" >
+
+                    <EditText
+                        android:id="@+id/tab_log_edittext"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="top"
+                        android:layout_margin="5dip"
+                        android:editable="false" >
+                    </EditText>
+                </LinearLayout>
+
+                <!-- * T A B * C U S T O M * -->
+
+                <LinearLayout
+                    android:id="@+id/tab_custom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <ScrollView
+                        
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tab_custom_text_cronometer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="#53b8ff"
+                                android:textSize="20sp" >
+                            </TextView>
+
+                            <ImageView
+                                android:id="@+id/tab_custom_image_activity"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/setup" >
+                            </ImageView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal" >
+
+                                <Button
+                                    android:id="@+id/tab_back_button"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dip"
+                                    android:layout_weight="0.5"
+                                    android:drawableLeft="@drawable/tab_setup"
+                                    android:enabled="false"
+                                    android:text="@string/back" />
+
+                                <Button
+                                    android:id="@+id/tab_custom_button"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="5dip"
+                                    android:layout_weight="0.5"
+                                    android:drawableLeft="@drawable/tab_setup"
+                                    android:text="@string/setup_sensor" /> 
+                            </LinearLayout>
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</ScrollView>

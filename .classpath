@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="lib" path="libs/http-20070405.jar"/>
+	<classpathentry kind="lib" path="libs/org.jxreport.jar"/>
+	<classpathentry kind="lib" path="libs/gcm.jar"/>
+	<classpathentry kind="lib" path="libs/junit-4.5.jar"/>
+	<classpathentry kind="lib" path="libs/org.restlet-2.2-RC3.jar"/>
+	<classpathentry kind="lib" path="libs/org.restlet.ext.json-2.2-RC3.jar"/>
+	<classpathentry kind="lib" path="libs/org.restlet.ext.net-2.2-RC2.jar"/>
+	<classpathentry kind="lib" path="libs/org.restlet.ext.ssl-2.2-RC2.jar"/>
+	<classpathentry kind="lib" path="libs/org.restlet.ext.xml-2.2-RC3.jar"/>
+	<classpathentry kind="lib" path="libs/pentaho.jar"/>
+	<classpathentry kind="lib" path="libs/spineandroid.jar"/>
+	<classpathentry kind="lib" path="libs/weka-dev-3.7.9.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>
